@@ -2,6 +2,11 @@
 name = "macro-bits"
 version = "0.1.0"
 edition = "2021"
+description = "A crate for performing macro-based bit manipulation."
+authors = ["Frostie314159"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repositoty = "https://github.com/Frostie314159/macro-bits"
 
 [dependencies]
 defile = "0.2.1"
