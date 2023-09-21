@@ -128,7 +128,7 @@ macro_rules! write_field {
 ///     y: true,
 ///     z: 7
 /// };
-/// assert_eq!(target, Test::from(0xff));
+/// assert_eq!(target, Test::from_representation(0xff));
 /// assert_eq!(u8::from(target), 0xff);
 /// ```
 macro_rules! bitfield {
