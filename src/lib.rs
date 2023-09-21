@@ -6,6 +6,7 @@ mod bitfield;
 mod bit;
 #[macro_use]
 mod convertable_enum;
+pub use defile;
 
 #[macro_export]
 macro_rules! generate_conversions {

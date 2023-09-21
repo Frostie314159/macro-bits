@@ -28,7 +28,7 @@ macro_rules! serializable_enum {
             ),*
         }
     ) => {
-        ::defile::defile!{
+        ::macro_bits::defile::defile!{
             $(#[$enum_attr])*
             $enum_visibility enum $enum_name {
                 $(
