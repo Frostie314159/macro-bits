@@ -3,15 +3,6 @@
 version = 3
 
 [[package]]
-name = "bin-utils"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "86751aa13ee87d77a04bc207968d4206af5abd6ae8ca56ff918fbd4d3fbb1268"
-dependencies = [
- "try_take",
-]
-
-[[package]]
 name = "defile"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -28,14 +19,7 @@ checksum = "87c5c1460bfb0f719e899feab6ae532e5e0f059cdc85913bab8e6a0d7980245e"
 
 [[package]]
 name = "macro-bits"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
- "bin-utils",
  "defile",
 ]
-
-[[package]]
-name = "try_take"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aea1898c4c4e07d3db4508bbebbd089ef00c2169646beb80c85453400c1946ee"
