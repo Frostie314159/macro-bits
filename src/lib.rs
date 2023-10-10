@@ -6,6 +6,9 @@ mod bitfield;
 mod bit;
 #[macro_use]
 mod convertable_enum;
+#[macro_use]
+mod incomplete_const_array;
+
 pub use defile;
 
 #[macro_export]
