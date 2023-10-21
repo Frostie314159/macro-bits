@@ -8,6 +8,8 @@ mod bit;
 mod convertable_enum;
 #[macro_use]
 mod incomplete_const_array;
+/// Utility macros for shortend syntaxes for definitions.
+mod gen_def;
 
 pub use defile;
 
