@@ -5,7 +5,7 @@ mod bitfield;
 #[macro_use]
 mod bit;
 #[macro_use]
-mod convertable_enum;
+mod serializable_enum;
 #[macro_use]
 mod incomplete_const_array;
 /// Utility macros for shortend syntaxes for definitions.

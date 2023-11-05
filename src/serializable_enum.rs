@@ -38,7 +38,7 @@ macro_rules! serializable_enum {
                 Unknown($representation)
             }
             impl $enum_name {
-                pub fn from_representation(value: $representation) -> Self {
+                pub const fn from_representation(value: $representation) -> Self {
                     use $enum_name::*;
                     match value {
                         $(
@@ -47,7 +47,7 @@ macro_rules! serializable_enum {
                         x => Self::Unknown(x)
                     }
                 }
-                pub fn to_representation(self) -> $representation {
+                pub const fn to_representation(self) -> $representation {
                     use $enum_name::*;
                     match self {
                         $(
