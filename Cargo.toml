@@ -1,6 +1,6 @@
 [package]
 name = "macro-bits"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 description = "A crate for performing macro-based bit manipulation."
 authors = ["Frostie314159"]
