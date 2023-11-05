@@ -37,6 +37,7 @@ macro_rules! serializable_enum {
                 )*
                 Unknown($representation)
             }
+            #[allow(ineffective_bit_mask)]
             impl $enum_name {
                 pub const fn from_representation(value: $representation) -> Self {
                     use $enum_name::*;
