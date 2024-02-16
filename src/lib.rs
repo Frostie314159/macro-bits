@@ -34,12 +34,12 @@ macro_rules! generate_conversions {
     ($to:ty, $representation:ty, $target_type:ty, $_:expr) => {
         impl From<$to> for $target_type {
             fn from(value: $to) -> Self {
-                Self::from_representation(value as $representation)
+                Self::from_bits(value as $representation)
             }
         }
         impl From<$target_type> for $to {
             fn from(value: $target_type) -> Self {
-                value.to_representation() as $to
+                value.into_bits() as $to
             }
         }
     };

@@ -19,7 +19,7 @@ checksum = "87c5c1460bfb0f719e899feab6ae532e5e0f059cdc85913bab8e6a0d7980245e"
 
 [[package]]
 name = "macro-bits"
-version = "0.1.4"
+version = "0.1.5"
 dependencies = [
  "defile",
 ]

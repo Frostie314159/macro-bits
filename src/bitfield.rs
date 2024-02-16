@@ -128,7 +128,7 @@ macro_rules! write_field {
 ///     y: true,
 ///     z: 7
 /// };
-/// assert_eq!(target, Test::from_representation(0xff));
+/// assert_eq!(target, Test::from_bits(0xff));
 /// assert_eq!(u8::from(target), 0xff);
 /// ```
 macro_rules! bitfield {
@@ -176,7 +176,7 @@ macro_rules! bitfield {
                         ::macro_bits::check_field_mask!($field_type, $field_mask, $field_name);
                     )*
                 };
-                pub fn from_representation(value: $struct_representation) -> Self {
+                pub fn from_bits(value: $struct_representation) -> Self {
                     $(
                         let $field_name = 
                         ::macro_bits::read_field!(
@@ -191,7 +191,7 @@ macro_rules! bitfield {
                         )+
                     }
                 }
-                pub fn to_representation(self) -> $struct_representation {
+                pub fn into_bits(self) -> $struct_representation {
                     let mut data: $struct_representation = 0;
                     $(
                         data |= (

@@ -46,6 +46,6 @@ fn main() {
         frame_sub_type: ManagementSubType::ProbeRequest,
         flags: FCFFlags::default()
     };
-    assert_eq!(target, FrameControlField::from_representation(raw));
-    assert_eq!(target.to_representation(), raw);
+    assert_eq!(target, FrameControlField::from_bits(raw));
+    assert_eq!(target.into_bits(), raw);
 }

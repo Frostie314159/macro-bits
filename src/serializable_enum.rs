@@ -14,9 +14,9 @@
 ///         C => 2
 ///     }
 /// }
-/// assert_eq!(ABC::from_representation(2), ABC::C);
-/// assert_eq!(ABC::from_representation(3), ABC::Unknown(3));
-/// assert_eq!((ABC::C).to_representation(), 2);
+/// assert_eq!(ABC::from_bits(2), ABC::C);
+/// assert_eq!(ABC::from_bits(3), ABC::Unknown(3));
+/// assert_eq!((ABC::C).into_bits(), 2);
 /// ```
 macro_rules! serializable_enum {
     (
@@ -39,7 +39,7 @@ macro_rules! serializable_enum {
             }
             #[allow(ineffective_bit_mask)]
             impl $enum_name {
-                pub const fn from_representation(value: $representation) -> Self {
+                pub const fn from_bits(value: $representation) -> Self {
                     use $enum_name::*;
                     match value {
                         $(
@@ -48,7 +48,7 @@ macro_rules! serializable_enum {
                         x => Self::Unknown(x)
                     }
                 }
-                pub const fn to_representation(self) -> $representation {
+                pub const fn into_bits(self) -> $representation {
                     use $enum_name::*;
                     match self {
                         $(
